@@ -50,7 +50,7 @@
             <section class="row log">
                 <div class="small-12 columns">
                     <ul>
-                        <li v-for="log in logs" :class="className">
+                        <li v-for="log in logs" :class="className(log)">
                             {{log.person}} {{log.text}}
                         </li>
                     </ul>
