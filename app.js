@@ -8,6 +8,13 @@ new Vue({
     hasSpecial: true,
     canHeal: true,
   },
+  computed: {
+    className() {
+      return log.person === 'The monster' || log.person === 'HEAL! You'
+        ? 'monster-turn'
+        : 'player-turn'
+    },
+  },
   watch: {
     playerHealth(health) {
       if (health > 100) {
